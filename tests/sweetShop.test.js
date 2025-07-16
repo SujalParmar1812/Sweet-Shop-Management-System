@@ -34,6 +34,27 @@ describe('sweet shop management', () => {
     expect(afterDelete.length).toBe(originalLength-1);
     expect(afterDelete.find(s=>s.id===sweetToDelete.id)).toBeUndefined();
   })
+
+  test('should search sweets by name', () => {
+    const sweetName = shop.searchSweet({"name":"Caramel Chocolate"});
+    expect(sweetName.length).toBeGreaterThan(0);
+    expect(sweetName[0].name).toBe("Caramel Chocolate");
+  })
+
+  test('should search sweets by category', () => {
+    const sweetCategory = shop.searchSweet({"category":"Chocolate"});
+    expect(sweetCategory.length).toBeGreaterThan(0);
+    sweetCategory.forEach(sweet => expect(sweet.category).toBe('Chocolate'));
+  })
+
+  test('should search sweets by max-price', () => {
+    const sweetsInRange = shop.searchSweet({"maxPrice":100});
+    expect(sweetsInRange.every(sweet=>sweet.price<=100)).toBe(true);
+  })
+  
+  
+  
+
   
   
 });
