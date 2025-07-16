@@ -1,4 +1,4 @@
-
+const SweetShop = require('../src/sweetShop')
 
 describe('sweet shop management', () => {
   let shop;

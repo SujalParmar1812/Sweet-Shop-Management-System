@@ -82,5 +82,12 @@
     "category": "Pastry",
     "price": 60,
     "quantity": 18
+  },
+  {
+    "id": 13,
+    "name": "Badam Halwa",
+    "category": "Nut-based",
+    "price": 50,
+    "quantity": 10
   }
 ]
