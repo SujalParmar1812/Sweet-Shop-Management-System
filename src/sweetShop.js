@@ -24,9 +24,17 @@ class SweetShop {
     }
 
     deleteSweet(id){
-        //refactor
         this.sweets = this.sweets.filter(s=>s.id!==id);
         this.saveToFile();
+    }
+
+    searchSweet(filter){
+        return this.sweets.filter(sweet=>{
+            if(filter.name && sweet.name!==filter.name) return false;
+            if(filter.category && sweet.category!==filter.category) return false;
+            if(filter.maxPrice && sweet.price > filter.maxPrice) return false;
+            return true;
+        })
     }
     
   saveToFile() {
