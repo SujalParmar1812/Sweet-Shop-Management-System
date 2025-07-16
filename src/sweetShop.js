@@ -51,13 +51,16 @@ class SweetShop {
         this.saveToFile();
         
     }
-
+    
+    //refactor
     restockSweet(id, quantity) {
-        const sweet = this.sweets.find(s => s.id === id);
-        if (!sweet) throw new Error("sweet not found");
-        sweet.quantity = quantity;
-        this.saveToFile();
+        if (quantity < 0) throw new Error("Quantity cannot be negative");
+
+        this.updateSweetQuantity(id, (sweet) => {
+            sweet.quantity = quantity;
+        });
     }
+
 
 
     
