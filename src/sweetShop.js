@@ -10,7 +10,6 @@ class SweetShop {
     }
 
     addSweet(sweet) {
-        //refactor
         const exists = this.sweets.some(item => item.id === sweet.id);
         if (exists) {
             throw new Error(`Sweet with ID ${sweet.id} already exists.`);
@@ -20,8 +19,9 @@ class SweetShop {
     }
 
     getAllSweets(){
-        //green
-        return this.sweets;
+        //refactor
+         const data = fs.readFileSync(path, 'utf-8');
+        return JSON.parse(data);
     }
     
   saveToFile() {
