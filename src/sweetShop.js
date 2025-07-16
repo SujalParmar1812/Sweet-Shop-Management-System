@@ -18,6 +18,11 @@ class SweetShop {
         this.sweets.push(sweet);
         this.saveToFile();
     }
+
+    getAllSweets(){
+        //green
+        return this.sweets;
+    }
     
   saveToFile() {
     fs.writeFileSync(path, JSON.stringify(this.sweets, null, 2));
