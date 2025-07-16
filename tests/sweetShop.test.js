@@ -61,7 +61,7 @@ describe('sweet shop management', () => {
 
   test('purchaseSweet() should throw error if quantity exceeds available stock', () => {
     const sweet = shop.getAllSweets().find(s => s.id === 4);
-    expect(() => shop.purchaseSweet(1, sweet.quantity + 10)).toThrow();
+    expect(() => shop.purchaseSweet(4, sweet.quantity + 10)).toThrow();
   });
 
   
