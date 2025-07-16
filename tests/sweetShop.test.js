@@ -30,8 +30,8 @@ describe('sweet shop management', () => {
     const sweetToDelete = shop.getAllSweets()[shop.getAllSweets().length-1];
     shop.deleteSweet(sweetToDelete.id);
 
-    const afterDelete = shop.getAllSweets().length;
-    expect(afterDelete).toBe(originalLength-1);
+    const afterDelete = shop.getAllSweets();
+    expect(afterDelete.length).toBe(originalLength-1);
     expect(afterDelete.find(s=>s.id===sweetToDelete.id)).toBeUndefined();
   })
   

@@ -89,12 +89,5 @@
     "category": "Nut-based",
     "price": 50,
     "quantity": 10
-  },
-  {
-    "id": 14,
-    "name": "Snickers",
-    "category": "Chocolate",
-    "price": 20,
-    "quantity": 30
   }
 ]

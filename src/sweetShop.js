@@ -24,7 +24,9 @@ class SweetShop {
     }
 
     deleteSweet(id){
+        //refactor
         this.sweets = this.sweets.filter(s=>s.id!==id);
+        this.saveToFile();
     }
     
   saveToFile() {
