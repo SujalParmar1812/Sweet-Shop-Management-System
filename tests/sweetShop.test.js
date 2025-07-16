@@ -19,4 +19,10 @@ describe('sweet shop management', () => {
     shop.addSweet(sweet);
     expect(shop.sweets.length).toBe(14);
   });
+
+  test('should get data of all the sweets available in the shop', () => {
+    const sweets = shop.getAllSweets();
+    expect(sweets.length).toBe(14);
+  })
+  
 });
