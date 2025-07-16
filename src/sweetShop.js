@@ -36,7 +36,7 @@ class SweetShop {
         return true;
     });
     }
-    //refactor
+
     purchaseSweet(id, quantity=1) {
         this.updateSweetQuantity(id,(sweet)=>{
             if(sweet.quantity<quantity) throw new Error("Insufficient stock");
@@ -51,6 +51,14 @@ class SweetShop {
         this.saveToFile();
         
     }
+
+    restockSweet(id, quantity) {
+        const sweet = this.sweets.find(s => s.id === id);
+        if (!sweet) throw new Error("sweet not found");
+        sweet.quantity = quantity;
+        this.saveToFile();
+    }
+
 
     
   saveToFile() {
