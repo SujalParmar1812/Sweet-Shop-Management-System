@@ -28,7 +28,6 @@ class SweetShop {
         this.saveToFile();
     }
 
-    //refactor
    searchSweet({ name, category, maxPrice }) {
     return this.sweets.filter(sweet => {
         if (name && !sweet.name.toLowerCase().includes(name.toLowerCase())) return false;
@@ -36,6 +35,13 @@ class SweetShop {
         if (maxPrice !== undefined && sweet.price > maxPrice) return false;
         return true;
     });
+    }
+
+    purchaseSweet(id, quantity) {
+    const sweet = this.sweets.find(s => s.id === id);
+    if (!sweet || sweet.quantity < quantity) throw new Error("Insufficient stock or sweet not found");
+    sweet.quantity -= quantity;
+    this.saveToFile();
 }
 
     
