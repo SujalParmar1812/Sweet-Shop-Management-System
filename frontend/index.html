@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Shop Dashboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #4a148c;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    button {
+      background-color: #4a148c;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #6a1b9a;
+    }
+
+    .input, .add-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    input {
+      padding: 10px;
+      width: 200px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      outline: none;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      text-align: center;
+      padding: 12px;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      background: #4a148c;
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    .actions button {
+      margin: 0 5px;
+      padding: 5px 10px;
+      font-size: 0.9rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Sweet Shop Dashboard</h1>
+
+    <div style="text-align:center; margin-bottom:20px;">
+      <button onclick="getAllSweets()">Get All Sweets</button>
+    </div>
+
+    <div class="input">
+      <input id="searchName" placeholder="Search by Name">
+      <input id="searchCategory" placeholder="Category">
+      <input id="searchMaxPrice" placeholder="Max Price">
+      <button onclick="searchSweets()">Search</button>
+    </div>
+
+    <div class="tableDiv">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="sweetTable"></tbody>
+      </table>
+    </div>
+
+    <h2>Add Sweet</h2>
+    <div class="add-form">
+      <input id="addId" placeholder="ID">
+      <input id="addName" placeholder="Name">
+      <input id="addCategory" placeholder="Category">
+      <input id="addPrice" placeholder="Price">
+      <input id="addQuantity" placeholder="Quantity">
+      <button onclick="addSweet()">Add Sweet</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

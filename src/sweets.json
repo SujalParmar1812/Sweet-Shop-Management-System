@@ -1,17 +1,10 @@
 [
   {
-    "id": 1,
-    "name": "Chocolate Truffle",
-    "category": "Chocolate",
-    "price": 150,
-    "quantity": 18
-  },
-  {
     "id": 2,
     "name": "Milk Chocolate Bar",
     "category": "Chocolate",
     "price": 80,
-    "quantity": 50
+    "quantity": 49
   },
   {
     "id": 3,
@@ -40,54 +33,5 @@
     "category": "Candy",
     "price": 8,
     "quantity": 250
-  },
-  {
-    "id": 7,
-    "name": "Black Forest Pastry",
-    "category": "Pastry",
-    "price": 70,
-    "quantity": 15
-  },
-  {
-    "id": 8,
-    "name": "Red Velvet Pastry",
-    "category": "Pastry",
-    "price": 90,
-    "quantity": 12
-  },
-  {
-    "id": 9,
-    "name": "Chocolate Mousse Pastry",
-    "category": "Pastry",
-    "price": 85,
-    "quantity": 10
-  },
-  {
-    "id": 10,
-    "name": "Caramel Chocolate",
-    "category": "Chocolate",
-    "price": 100,
-    "quantity": 40
-  },
-  {
-    "id": 11,
-    "name": "Lollipop Candy",
-    "category": "Candy",
-    "price": 5,
-    "quantity": 300
-  },
-  {
-    "id": 12,
-    "name": "Pineapple Pastry",
-    "category": "Pastry",
-    "price": 60,
-    "quantity": 18
-  },
-  {
-    "id": 13,
-    "name": "Badam Halwa",
-    "category": "Nut-based",
-    "price": 50,
-    "quantity": 10
   }
 ]
