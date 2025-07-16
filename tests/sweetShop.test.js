@@ -51,10 +51,18 @@ describe('sweet shop management', () => {
     const sweetsInRange = shop.searchSweet({"maxPrice":100});
     expect(sweetsInRange.every(sweet=>sweet.price<=100)).toBe(true);
   })
-  
-  
-  
 
-  
+  test('purchaseSweet() should decrease quantity of sweet by given amount', () => {
+    const originalQuantity = shop.getAllSweets()[0].quantity;
+    shop.purchaseSweet(1, 2);
+    const updatedQuantity = shop.getAllSweets().find(s => s.id === 1).quantity;
+    expect(updatedQuantity).toBe(originalQuantity - 2);
+  });
+
+  test('purchaseSweet() should throw error if quantity exceeds available stock', () => {
+    const sweet = shop.getAllSweets().find(s => s.id === 4);
+    expect(() => shop.purchaseSweet(1, sweet.quantity + 10)).toThrow();
+  });
+
   
 });
