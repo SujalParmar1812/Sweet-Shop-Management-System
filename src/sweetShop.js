@@ -19,9 +19,12 @@ class SweetShop {
     }
 
     getAllSweets(){
-        //refactor
-         const data = fs.readFileSync(path, 'utf-8');
+        const data = fs.readFileSync(path, 'utf-8');
         return JSON.parse(data);
+    }
+
+    deleteSweet(id){
+        this.sweets = this.sweets.filter(s=>s.id!==id);
     }
     
   saveToFile() {

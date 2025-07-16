@@ -31,7 +31,7 @@ describe('sweet shop management', () => {
     shop.deleteSweet(sweetToDelete.id);
 
     const afterDelete = shop.getAllSweets().length;
-    expect(afterDelete.length).toBe(originalLength-1);
+    expect(afterDelete).toBe(originalLength-1);
     expect(afterDelete.find(s=>s.id===sweetToDelete.id)).toBeUndefined();
   })
   
