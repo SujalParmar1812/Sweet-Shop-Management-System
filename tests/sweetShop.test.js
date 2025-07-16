@@ -64,5 +64,15 @@ describe('sweet shop management', () => {
     expect(() => shop.purchaseSweet(4, sweet.quantity + 10)).toThrow();
   });
 
+  test('restockSweet() should update quantity of a sweet', () => {
+    const sweetBefore = shop.getAllSweets().find(s => s.id === 1);
+    const newQuantity = sweetBefore.quantity + 4;
+
+    shop.restockSweet(1, newQuantity);
+    const sweetAfter = shop.getAllSweets().find(s => s.id === 1);
+
+    expect(sweetAfter.quantity).toBe(newQuantity);
+  });
+
   
 });
