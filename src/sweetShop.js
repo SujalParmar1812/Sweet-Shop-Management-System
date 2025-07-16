@@ -28,14 +28,16 @@ class SweetShop {
         this.saveToFile();
     }
 
-    searchSweet(filter){
-        return this.sweets.filter(sweet=>{
-            if(filter.name && sweet.name!==filter.name) return false;
-            if(filter.category && sweet.category!==filter.category) return false;
-            if(filter.maxPrice && sweet.price > filter.maxPrice) return false;
-            return true;
-        })
-    }
+    //refactor
+   searchSweet({ name, category, maxPrice }) {
+    return this.sweets.filter(sweet => {
+        if (name && !sweet.name.toLowerCase().includes(name.toLowerCase())) return false;
+        if (category && sweet.category !== category) return false;
+        if (maxPrice !== undefined && sweet.price > maxPrice) return false;
+        return true;
+    });
+}
+
     
   saveToFile() {
     fs.writeFileSync(path, JSON.stringify(this.sweets, null, 2));
