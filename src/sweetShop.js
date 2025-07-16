@@ -10,6 +10,11 @@ class SweetShop {
     }
 
     addSweet(sweet) {
+        //refactor
+        const exists = this.sweets.some(item => item.id === sweet.id);
+        if (exists) {
+            throw new Error(`Sweet with ID ${sweet.id} already exists.`);
+        }
         this.sweets.push(sweet);
         this.saveToFile();
     }

@@ -9,14 +9,14 @@ describe('sweet shop management', () => {
 
   test('should add a sweet and check by array length', () => {
     const sweet = {
-      id: 13,
-      name: 'Badam Halwa',
-      category: 'Nut-based',
-      price: 50,
-      quantity: 10
+      id: 14,
+      name: 'Snickers',
+      category: 'Chocolate',
+      price: 20,
+      quantity: 30
     };
 
     shop.addSweet(sweet);
-    expect(shop.sweets.length).toBe(13);
+    expect(shop.sweets.length).toBe(14);
   });
 });
