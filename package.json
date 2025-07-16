@@ -13,5 +13,20 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "jest-html-reporter": "^4.3.0"
+  },
+  "jest": {
+    "reporters": [
+      "default",
+      [
+        "jest-html-reporter",
+        {
+          "pageTitle": "Sweet Shop Test Report",
+          "outputPath": "./tests/report/test-reports.html"
+        }
+      ]
+    ]
+  }
 }
