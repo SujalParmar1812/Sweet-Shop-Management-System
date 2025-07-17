@@ -2,8 +2,8 @@
 
 A simple full-stack **Sweet Shop Management System** built using **Node.js**, **Express**, and **Vanilla JavaScript** with a focus on **Test-Driven Development (TDD)** using **Jest**. Data persistence is handled via a JSON file (`sweets.json`), making it ideal for small-scale inventory management projects.
 
-![Sweet Shop Screenshot](<img width="1900" height="1021" alt="sweet-shop" src="https://github.com/user-attachments/assets/39648721-aca7-45d4-a2c3-cc69881faa7b" />
-)
+
+<img width="1900" height="1021" alt="sweet-shop" src="https://github.com/user-attachments/assets/dbd6cbfb-bf1f-41f6-8897-15377cf082ae" />
 
 ## 🚀 Features
 
